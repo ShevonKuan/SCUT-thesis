@@ -1,0 +1,42 @@
+﻿\documentclass{scutthesis} % 不填充空白页。如果需要双面打印版，请注释掉本行并启用下一行
+%\documentclass[print-both-sides]{scutthesis} % 使用双面打印版（填充额外空白页以保证每一章开头都在奇数页）
+% 开始使用该模板请修改以下文件
+\input{docs/info}     % 在这里填写论文相关信息
+\input{docs/abstract}     % 在这里填写摘要内容注意华工要求关键词用分号分隔
+\begin{document}
+% 论文前置部分
+\frontmatter
+\pagenumbering{Roman}
+\makeUndergraduateCover    % 生成封面
+\makeabstract       % 生成中英文摘要
+\maketableofcontents        % 生成目录
+\makelistoffiguretable % 生成图表目录
+% 论文主体部分
+\mainmatter
+% 引言
+% 正文
+\include{docs/chap01} % 使用include导入章节tex文件
+\newclearpage
+\include{docs/chap02}
+\newclearpage
+\include{docs/chap03}
+\newclearpage
+\include{docs/chap04}
+\newclearpage
+% 论文后置部分
+\backmatter
+\include{docs/conclusion} % 制作结论章节
+\newclearpage
+% 参考文献
+\makereferences % 制作参考文献
+% 致谢
+\include{docs/ack} % 制作致谢
+\newclearpage
+% 附录部分
+% 附录
+{
+    \appendix
+    \include{docs/appendix1} % 导入附录
+    \newclearpage
+}
+\end{document}

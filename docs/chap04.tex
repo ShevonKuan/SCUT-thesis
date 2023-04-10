@@ -1,0 +1,85 @@
+\chapter{第四章	手写数字及写字人识别实验过程及其结果}
+\section{手写数字识别实验}
+\subsection{样本简介}
+
+本论文的手写数字识别实验当中所用的样本分为两类，一类是训练样本集，另一类是测试样本集。
+实验当中的训练样本集采用的是手写数字MNIST数据库。这个数据库当中包含训练集样本60000个样例和测试集样本10000个样例。MNIST数据库当中的数字样本已经全部大小归一化灰度化并且集中到同一个固定大小的图像当中。该数据库包括MST的SD-1和SD-3数据库，当中包含一系列的二级制的手写数字图像。其中SD-1的收集者来源是某高中的在校学生，而SD-3是由人口调查局员工收集的。则我们的训练样本集也就是MNIST当中的训练样本集有30000个样本来自SD-3，而另外30000个样本来自SD-1。这60000个训练样本分别来自约250个采集者。
+\subsection{Writer Depend类数字识别实验}
+\subsubsection{ABCvsA数字识别实验}
+实验内容：以A写字人、B写字人和C写字人，合计3000个数字0到9的数字图像数据为训练样本集。A写字人的1000个数字0到9的数字图像数据为测试样本集。学习率为1，单次训练样本数为10个，共训练40次。若识别所得数字与给定的标签匹配，则视为正确；不匹配则视为错误。
+\begin{table}[htbp]
+    \centering
+    \caption{ABCvsA数字识别实验结果}
+    \label{tab:1}
+    \begin{tabular}{@{}cccc@{}}
+        \toprule
+        训练样本 & ABC & 样本个数    & 3000    \\ \midrule
+        测试样本 & A   & 样本个数    & 1000    \\
+        训练次数 & —   & 单次训练样本数 & 10      \\
+        学习率  & 1   & 正确率     & 99.50\% \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection{ABCvsABC数字识别实验}
+实验内容：以A写字人、B写字人和C写字人，合计3000个数字0到9的数字图像数据为总样本集。在总样本集当中随机抽取2400个为训练样本集，余下的600个为测试样本集。学习率为1，单次训练样本数为10个，共训练40次。若识别所得数字与给定的标签匹配，则视为正确；不匹配则视为错误。
+\begin{table}[htbp]
+    \centering
+    \caption{ABCvsABC数字识别实验结果}
+    \label{tab:2}
+    \begin{tabular}{@{}cccc@{}}
+        \toprule
+        训练样本 & ABC & 样本个数    & 2400    \\ \midrule
+        测试样本 & ABC & 样本个数    & 600     \\
+        训练次数 & 40  & 单次训练样本数 & 10      \\
+        学习率  & 1   & 正确率     & 92.00\% \\ \bottomrule
+    \end{tabular}
+\end{table}
+\subsection{Writer Depend类数字识别实验结果分析}
+
+下面我们选取Writer Depend类数字识别实验当中的两个典型的例子ABCvsA数字识别实验以及MNIST\&ABCvsA数字识别实验的结果做详细分析。我们从ABCvsA数字识别实验中的训练样本集和测试样本集的手写数字图像样本集当中分别随机抽取一幅图像\ref{fig:complex}所示。
+
+\begin{figure}[htbp] % image examples & compare
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=6.54cm]{image/chap04/1.jpg}
+        \caption{实验训练集}
+        \label{fig:compare1}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=6.54cm]{image/chap04/2.jpg}
+        \caption{实验测试集}
+        \label{fig:compare2}
+    \end{subfigure}
+    \caption{ABCvsA数字识别实验集}
+    \label{fig:complex}
+\end{figure}
+
+下面我们对上述的训练集和测试集进行40次学习率为2，单次训练样本为10的迭代，得到错误率为0.50\%，而其中每次训练时的误差值组成的历史误差值画图分析如下：
+……
+\subsection{Writer Independ类数字识别实验}
+实验内容：以MNIST数据库为训练样本集，共计60000个训练样本。以A写字人合计1000个数字0到9的数字图像数据为测试样本集写字人识别实验
+……
+\subsection{样本简介}
+……
+\subsection{两位写字人识别实验}
+\subsubsection{单个数字的写字人识别实验}
+实验内容：以A写字人，合计800个数字5的数字图像数据加上B写字人，合计800个数字5的数字图像数据，共计1600个样本为总样本集。随机选取其中的1200个样本为训练样本集，其余的400个样本为测试样本集。学习率为2，单次训练样本数为10个，共训练30次。若识别所得写字人与给定的标签匹配，则视为正确；不匹配则视为错误。
+\begin{table}[]
+    \centering
+    \caption{单个数字写字人识别实验结果}
+    \label{tab:3}
+    \begin{tabular}{@{}cccc@{}}
+        \toprule
+        训练样本 & A5\&B5 & 样本个数    & 1200    \\ \midrule
+        测试样本 & A5\&B5 & 样本个数    & 400     \\
+        训练次数 & 30     & 单次训练样本数 & 10      \\
+        学习率  & 2      & 正确率     & 99.75\% \\ \bottomrule
+    \end{tabular}
+\end{table}
+\subsubsection{单个数字的写字人识别实验结果分析}
+
+……
+\section{本章小结}
+
+……。
