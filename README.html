@@ -730,17 +730,17 @@ hue-6-2: #e6c07b
 <ol>
 <li>点击<a href="https://github.com/ShevonKuan/SCUT-thesis/blob/main/scutthesis.cls">这里</a>下载最新的<code>scutthesis.cls</code>文件</li>
 <li>将下载的<code>scutthesis.cls</code>文件替换掉原来的文件</li>
-<li>在正文区添加<code>\makedisclaim</code>命令，如下<pre><code class="language-latex"><span class="hljs-keyword">\begin</span>{document}
-<span class="hljs-comment">% 论文前置部分</span>
-<span class="hljs-keyword">\frontmatter</span>
-<span class="hljs-keyword">\pagenumbering</span>{Roman}
-<span class="hljs-keyword">\makeUndergraduateCover</span>    <span class="hljs-comment">% 生成封面</span>
-+<span class="hljs-keyword">\makedisclaim</span>           <span class="hljs-comment">% 生成学位论文原创性声明</span>
-<span class="hljs-keyword">\makeabstract</span>       <span class="hljs-comment">% 生成中英文摘要</span>
-<span class="hljs-keyword">\maketableofcontents</span>        <span class="hljs-comment">% 生成目录</span>
-<span class="hljs-keyword">\makelistoffiguretable</span> <span class="hljs-comment">% 生成图表目录</span>
-<span class="hljs-comment">% 论文主体部分</span>
-<span class="hljs-keyword">\mainmatter</span>
+<li>在正文区添加<code>\makedisclaim</code>命令，如下<pre><code class="language-diff">\begin{document}
+% 论文前置部分
+\frontmatter
+\pagenumbering{Roman}
+\makeUndergraduateCover    % 生成封面
+<span class="hljs-addition">+\makedisclaim           % 生成学位论文原创性声明</span>
+\makeabstract       % 生成中英文摘要
+\maketableofcontents        % 生成目录
+\makelistoffiguretable % 生成图表目录
+% 论文主体部分
+\mainmatter
 </code></pre>
 </li>
 </ol>

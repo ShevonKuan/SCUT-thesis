@@ -19,7 +19,7 @@
 1. 点击[这里](https://github.com/ShevonKuan/SCUT-thesis/blob/main/scutthesis.cls)下载最新的`scutthesis.cls`文件
 2. 将下载的`scutthesis.cls`文件替换掉原来的文件
 3. 在正文区添加`\makedisclaim`命令，如下
-    ```latex
+    ```diff
     \begin{document}
     % 论文前置部分
     \frontmatter
