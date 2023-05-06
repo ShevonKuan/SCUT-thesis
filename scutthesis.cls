@@ -355,6 +355,36 @@
     \newclearpage
 }
 
+% 原创性声明
+\newcommand\makedisclaim{
+    \ctexset {
+        chapter = {
+          format={\centering\zihao{2}\heiti},
+          nameformat = {\zihao{2}\heiti},
+          beforeskip = {10pt},
+          afterskip = {20pt}
+         }
+    }
+
+    \chapter*{华南理工大学\\学位论文原创性声明}
+
+    \zihao{4}\songti
+
+    本人郑重声明：所呈交的论文是本人在导师的指导下独立进行研究所取得的研究成果。除了文中特别加以标注引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写的成果作品。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律后果由本人承担。
+
+    作者签名：\hspace{5cm}日期：\hspace{1cm}年\hspace{1cm}月\hspace{1cm}日
+    % \begin{flushright}
+    %     \makebox[2.1cm][s]{作者签名：} \makebox[5cm]{\hspace{1cm}} \\
+    %     \vspace{\baselineskip}
+    %     \makebox[2.1cm][s]{日期：} \makebox[5cm]{\hspace{1cm}年\hspace{1cm}月\hspace{1cm}日} \\
+    % \end{flushright}
+
+    % \input{docs/disclaim}
+    \thispagestyle{empty}
+    \newclearpage
+}
+
+
 
 % 摘要
 \newcommand\ckeywords[1]{\def\@ckeywords{#1}}
@@ -511,42 +541,42 @@
 \renewcommand\backmatter{
     \@mainmatterfalse
     \ctexset {
-    chapter = {
-      fixskip = true,
-      format={\centering\zihao{-2}\heiti},
-      nameformat = {\zihao{-2}\heiti},
-      beforeskip = {10pt},
-      afterskip = {20pt},
-      name = {},
-      number={\chinese{chapter}},
-      titleformat = {\zihao{-2}\heiti}
-     },
-    section = {
-      format = {\zihao{-3}\heiti},
-      aftername = \hspace{0.5em},
-      nameformat = {\zihao{-3}\heiti},
-      titleformat = {\zihao{-3}\heiti},
-      beforeskip = {0.5\baselineskip},
-      afterskip = {0.5\baselineskip plus 0.3\baselineskip minus 0.3\baselineskip},
-     },
-    subsection = {
-            format = {\zihao{4}\heiti},
-            aftername = \hspace{0.5em},
-            nameformat = {\zihao{4}\heiti},
-            titleformat = {\zihao{4}\heiti},
-            beforeskip = {0.5\baselineskip},
-            afterskip = {0.5\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip},
-        },
-    subsubsection = {
-            fixskip = true,
-            format = {\zihao{-4}\heiti},
-            aftername = \hspace{0.5em},
-            nameformat = {\zihao{-4}\heiti},
-            titleformat = {\zihao{-4}\heiti},
-            beforeskip = {0.5\baselineskip},
-            afterskip = {0.5\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip},
-        }
-}
+        chapter = {
+          fixskip = true,
+          format={\centering\zihao{-2}\heiti},
+          nameformat = {\zihao{-2}\heiti},
+          beforeskip = {10pt},
+          afterskip = {20pt},
+          name = {},
+          number={\chinese{chapter}},
+          titleformat = {\zihao{-2}\heiti}
+         },
+        section = {
+          format = {\zihao{-3}\heiti},
+          aftername = \hspace{0.5em},
+          nameformat = {\zihao{-3}\heiti},
+          titleformat = {\zihao{-3}\heiti},
+          beforeskip = {0.5\baselineskip},
+          afterskip = {0.5\baselineskip plus 0.3\baselineskip minus 0.3\baselineskip},
+         },
+        subsection = {
+                format = {\zihao{4}\heiti},
+                aftername = \hspace{0.5em},
+                nameformat = {\zihao{4}\heiti},
+                titleformat = {\zihao{4}\heiti},
+                beforeskip = {0.5\baselineskip},
+                afterskip = {0.5\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip},
+            },
+        subsubsection = {
+                fixskip = true,
+                format = {\zihao{-4}\heiti},
+                aftername = \hspace{0.5em},
+                nameformat = {\zihao{-4}\heiti},
+                titleformat = {\zihao{-4}\heiti},
+                beforeskip = {0.5\baselineskip},
+                afterskip = {0.5\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip},
+            }
+    }
 }
 
 
