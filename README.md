@@ -277,6 +277,9 @@ pip install pygments
 \frontmatter
 \pagenumbering{Roman}
 \makeUndergraduateCover    % 生成封面
+\makedisclaim
+%\makedisclaim[title.png]            % 生成学位论文原创性声明
+% 将title.png替换为自己的签名文件，如果不需要签名的话，可以直接使用\makedisclaim命令
 \makeabstract       % 生成中英文摘要
 \maketableofcontents        % 生成目录
 \makelistoffiguretable % 生成图表目录
@@ -304,9 +307,9 @@ pip install pygments
 % 附录部分
 % 附录
 {
-\appendix
-\include{docs/appendix1} % 导入附录
-\newclearpage
+    \appendix
+    \include{docs/appendix1} % 导入附录
+    \newclearpage
 }
 \end{document}
 ```
