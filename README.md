@@ -32,6 +32,12 @@
     % 论文主体部分
     \mainmatter
     ```
+4. 可以使用`\makedisclaim[签名.png]`来指定签名图片，如果需要设置图片的位置详见`scutthesis.cls`文件中384行
+    ```latex
+        \begin{textblock}{5}(3.8,6.1) % 指定图片的位置和大小
+            \includegraphics[height=2cm]{#1}
+        \end{textblock}
+    ```
 
 [TOC]
 
