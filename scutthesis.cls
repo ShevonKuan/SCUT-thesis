@@ -123,7 +123,7 @@
     BoldFont   = AdobeHeitiStd-Regular.otf,
     ItalicFont = AdobeKaitiStd-Regular.otf
 ]
-\setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}
+\setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}%AdobeHeitiStd-Regular.otf
 [
     Path = ./fonts/,
     AutoFakeBold,
@@ -356,7 +356,7 @@
 }
 
 % 原创性声明
-\newcommand\makedisclaim[1][]{
+\newcommand\makedisclaim[1][title.png]{
     \ctexset {
         chapter = {
           format={\centering\zihao{2}\heiti},
@@ -378,16 +378,9 @@
     %     \vspace{\baselineskip}
     %     \makebox[2.1cm][s]{日期：} \makebox[5cm]{\hspace{1cm}年\hspace{1cm}月\hspace{1cm}日} \\
     % \end{flushright}
-    \ifthenelse{\equal{#1}{}}{%
-
-    }{%
-        \begin{textblock}{5}(3.8,6.1) % 指定图片的位置和大小
-            \includegraphics[height=2cm]{#1}
-        \end{textblock}
-    }%
-
-
-
+    \begin{textblock}{5}(3.8,6.1) % 指定图片的位置和大小
+        \includegraphics[height=2cm]{#1}
+    \end{textblock}
     % \input{docs/disclaim}
     \thispagestyle{empty}
     \newclearpage
@@ -549,6 +542,9 @@
 
 \renewcommand\backmatter{
     \@mainmatterfalse
+    \setcounter{chapter}{0}
+    \setcounter{section}{0}
+
     \ctexset {
         chapter = {
           fixskip = true,
@@ -556,8 +552,6 @@
           nameformat = {\zihao{-2}\heiti},
           beforeskip = {10pt},
           afterskip = {20pt},
-          name = {},
-          number={\chinese{chapter}},
           titleformat = {\zihao{-2}\heiti}
          },
         section = {
@@ -586,6 +580,8 @@
                 afterskip = {0.5\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip},
             }
     }
+
+
 }
 
 
@@ -598,7 +594,7 @@
 
     % 引用样式
     \bibliographystyle{gbt7714-numerical}
-    \nocite{*}
+    % \nocite{*}
     % F15 参考文献内容 宋体五号
     {\zihao{-4}\songti\linespread{1.5}\bibliography{main}}    % 引用文献列表
     \endgroup
@@ -610,8 +606,6 @@
     % \fancypagestyle{plain}{
     %     \fancyhead[R]{\zihao{-5} 附录\thechapter \leftmark}
     % }
-    \pagestyle{fancy}
-    \fancyhf{}
     \setcounter{chapter}{0}
     \setcounter{section}{0}
     \gdef\@chapapp{\appendixname}

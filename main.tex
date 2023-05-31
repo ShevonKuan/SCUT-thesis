@@ -28,6 +28,7 @@
 \newclearpage
 % 论文后置部分
 \backmatter
+\renewcommand{\chaptermark}[1]{\markboth{\songti #1}{}}
 \include{docs/conclusion} % 制作结论章节
 \newclearpage
 % 参考文献
@@ -39,6 +40,7 @@
 % 附录
 {
     \appendix
+    \renewcommand{\chaptermark}[1]{\markboth{\songti  附录\thechapter\ ~#1}{}}
     \include{docs/appendix1} % 导入附录
     \newclearpage
 }
