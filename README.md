@@ -13,7 +13,7 @@
 
 ## 新增ppt模板 (2023.6.1修订)
 
-见[这里](https://github.com/ShevonKuan/SCUT-thesis/SCUTbeamer)，相对于论文模板，需要更多的latex相关知识。
+见[这里](https://github.com/ShevonKuan/SCUT-thesis/tree/main/SCUTbeamer)，相对于论文模板，需要更多的latex相关知识。
 ![](https://raw.githubusercontent.com/ShevonKuan/images/main/202306011136427.png)
 
 ## 修复页眉bug (2023.5.31修订)
