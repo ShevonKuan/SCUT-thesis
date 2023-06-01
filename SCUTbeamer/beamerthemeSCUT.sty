@@ -1,0 +1,132 @@
+
+\DeclareOptionBeamer{width}
+{\PassOptionsToPackage{width=#1}{beamerouterthemesidebar}}
+
+\DeclareOptionBeamer{hideothersubsections}
+{\PassOptionsToPackage{hideothersubsections=#1}{beamerouterthemesidebar}}
+
+\DeclareOptionBeamer{hideallsubsections}
+{\PassOptionsToPackage{hideallsubsections=#1}{beamerouterthemesidebar}}
+
+\ProcessOptionsBeamer
+
+% % 颜色设置
+\usepackage{xcolor} % 用于颜色设置
+
+
+% % 表格制作
+\usepackage{booktabs} % 用于三线表制作
+\usepackage{multirow} % 用于合并表格行
+\usepackage{makecell} % 用于单元格内换行和加粗等
+\usepackage{longtable} % 用于长表格制作
+\usepackage{colortbl} % 用于设置表格颜色
+\usepackage{array}
+
+% % 图片插入
+\usepackage{graphicx} % 用于插入图片
+\usepackage{wrapfig} % 用于图片的环绕排版
+\usepackage[labelsep=space]{caption}
+\usepackage[font=footnotesize]{subcaption} % 用于插入子图片
+
+
+% % 时间设置
+\usepackage{datetime}
+
+% % 字体设置
+\usepackage{fontspec}
+\setmonofont{Consolas}
+\usepackage{amsmath, bm} % 用于设置数学公式字体
+\usepackage{newtxmath}
+
+\setCJKmainfont{AdobeSongStd-Light.otf}
+[
+    Path=../fonts/,
+    BoldFont   =AdobeHeitiStd-Regular.otf,
+    ItalicFont =AdobeKaitiStd-Regular.otf
+]
+\setCJKsansfont{AdobeHeitiStd-Regular.otf}
+[
+    Path=../fonts/,
+    AutoFakeBold,
+    AutoFakeSlant
+]
+\setCJKmonofont{AdobeFangsongStd-Regular.otf}
+[
+    Path =../fonts/,
+]
+\setCJKfamilyfont{zhsong}{AdobeSongStd-Light.otf}
+[
+    Path = ../fonts/,
+    BoldFont   = AdobeHeitiStd-Regular.otf,
+    ItalicFont = AdobeKaitiStd-Regular.otf
+]
+\setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}%AdobeHeitiStd-Regular.otf
+[
+    Path = ../fonts/,
+    AutoFakeBold,
+    AutoFakeSlant
+]
+\setCJKfamilyfont{zhkai}{AdobeKaitiStd-Regular.otf}
+[
+    Path = ../fonts/,
+    AutoFakeBold,
+    AutoFakeSlant
+]
+\setCJKfamilyfont{zhfs}{AdobeFangsongStd-Regular.otf}
+[
+    Path = ../fonts/,
+    AutoFakeBold,
+    AutoFakeSlant
+]
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}
+\usefonttheme[onlymath]{serif}
+% 插图和表格标题设置
+\usepackage[font=footnotesize,tableposition=top]{caption} % 设置插图和表格标题字体和位置
+
+% 参考文献设置
+\usepackage[numbers,sort&compress]{natbib} % 设置参考文献格式
+
+% 设定时间为中文日期
+\ctexset{today=small}
+
+
+
+
+
+
+
+
+
+\mode<presentation>
+
+\useoutertheme[height=0pt,left]{sidebar}
+\usecolortheme{structure}
+\setbeamercolor*{titlelike}{parent=structure}
+
+\useinnertheme{rectangles}
+\setbeamertemplate{frametitle}[default][right]
+
+\definecolor{covblue}{RGB}{0 67 134}
+\setbeamertemplate{sidebar}[pagenumber]
+\addtobeamertemplate{sidebar left}{}{{\hspace{0.15cm}\includegraphics[width=1.3cm]{SCUT白色校徽.pdf}}\vspace{0.4cm}}
+\setbeamercolor{sidebar}{bg=covblue}
+
+\setbeamercolor{author in sidebar}{bg=white,fg=white!20}
+\setbeamerfont{author in sidebar}{size=\Tiny}
+\setbeamercolor{title in sidebar}{bg=white,fg=white}
+\setbeamercolor{structure}{fg=covblue}
+\setbeamercolor{section in sidebar}{fg=white}
+\setbeamercolor{subsection in sidebar}{fg=white}
+
+
+
+\usebackgroundtemplate{
+	\hspace*{0.6\paperwidth}
+	%\hspace*{0.01\paperwidth}
+	%{\transparent{0.08}\includegraphics[height=0.4\paperheight,trim=0 0 1.0cm 0.85cm]{cov_phoenix}}
+	{\includegraphics[width=0.3\paperwidth,trim=0 0 1.32cm 0.85cm]{SCUT0.08透明度校徽.pdf}}
+}
+
+\mode
+<all>
