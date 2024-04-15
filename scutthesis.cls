@@ -284,6 +284,9 @@
 \newcommand\emajor[1]{\def\@emajor{#1}}
 \newcommand\cmentor[1]{\def\@cmentor{#1}}
 \newcommand\ementor[1]{\def\@ementor{#1}}
+\newcommand\mailbox[1]{\def\@mailbox{#1}}
+\newcommand\phonenum[1]{\def\@phonenum{#1}}
+
 
 \newcommand{\inputcode}[2]{ % 定义代码块命令，参数 #1 表示语言，#2 表示文件名
     \inputminted[
@@ -357,7 +360,7 @@
 }
 
 % 原创性声明
-\newcommand\makedisclaim[1][title.png]{
+\newcommand\makedisclaim[1][image/签名.png]{
     \ctexset {
         chapter = {
           format={\centering\zihao{2}\heiti},
@@ -366,7 +369,6 @@
           afterskip = {20pt}
          }
     }
-
     \chapter*{华南理工大学\\学位论文原创性声明}
 
     \zihao{4}\songti
@@ -379,10 +381,35 @@
     %     \vspace{\baselineskip}
     %     \makebox[2.1cm][s]{日期：} \makebox[5cm]{\hspace{1cm}年\hspace{1cm}月\hspace{1cm}日} \\
     % \end{flushright}
-    \begin{textblock}{5}(3.8,6.1) % 指定图片的位置和大小
-        \includegraphics[height=2cm]{#1}
+    \begin{textblock}{5}(3.8,6.0) % 指定图片的位置和大小
+        \includegraphics[height=1.5cm]{#1}
     \end{textblock}
     % \input{docs/disclaim}
+    \ctexset{chapter/break={}}
+    \vspace{2em}
+
+    \chapter*{学位论文版权使用授权书}
+
+    \zihao{4}\songti
+
+    本学位论文作者完全了解学校有关保留、使用学位论文的规定，即：学校有权保存并向国家有关部门或机构送交论文的复印件和电子版，允许学位论文被查阅；学校可以公布学位论文的全部或部分内容，可以允许采用影印、缩印或其它复制手段保存、汇编学位论文。本人电子文档的内容和纸质论文的内容相一致。
+
+    作者签名：\hspace{5cm}日期：\number\year 年\number\month 月\number\day 日
+
+    指导教师签名：\hspace{4cm}日期：\number\year 年\number\month 月\number\day 日
+
+    作者联系电话： \@phonenum\hspace{1.5cm} 电子邮箱:  \@mailbox
+    % \begin{flushright}
+    %     \makebox[2.1cm][s]{作者签名：} \makebox[5cm]{\hspace{1cm}} \\
+    %     \vspace{\baselineskip}
+    %     \makebox[2.1cm][s]{日期：} \makebox[5cm]{\hspace{1cm}年\hspace{1cm}月\hspace{1cm}日} \\
+    % \end{flushright}
+    \begin{textblock}{5}(3.8,10.745) % 指定图片的位置和大小
+        \includegraphics[height=1.5cm]{#1}
+    \end{textblock}
+
+
+
     \thispagestyle{empty}
     \newclearpage
 }
