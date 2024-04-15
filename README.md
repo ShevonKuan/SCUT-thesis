@@ -11,13 +11,6 @@
 ![](./demo.png)
 
 
-## 新增ppt模板 (2023.6.1修订)
-
-见[这里](https://github.com/ShevonKuan/SCUT-thesis/tree/main/SCUTbeamer)，相对于论文模板，需要更多的latex相关知识。
-![](https://raw.githubusercontent.com/ShevonKuan/images/main/202306011136427.png)
-
-## 修复页眉bug (2023.5.31修订)
-
 ## ❗❗❗近期重要更新 (2024.4.15修订)
 
 23.10.10规范中学校教务处模板中添加了学位论文原创性声明和论文版权使用授权书，同时更改了封面的布局版式，感谢[](https://github.com/ShevonKuan/SCUT-thesis/issues/1)的提醒，本模板已经更新，使用时请注意。若正在使用旧版本模板请参阅下面的更新方法
@@ -47,7 +40,7 @@
         \end{textblock}
     ```
 5. 由于版权使用授权书需要手机号码和邮箱，请在`docs/info.tex`中加上这两行，不是的话可能编译失败
-   ```latex
+   ```diff
     \cmajor{计算机科学与技术}
     \emajor{Computer Science and Technology}
     +\phonenum{13612345678}
@@ -57,14 +50,22 @@
    ```
 
 
+
+## 新增ppt模板 (2023.6.1修订)
+
+见[这里](https://github.com/ShevonKuan/SCUT-thesis/tree/main/SCUTbeamer)，相对于论文模板，需要更多的latex相关知识。
+![](https://raw.githubusercontent.com/ShevonKuan/images/main/202306011136427.png)
+
+## 修复页眉bug (2023.5.31修订)
+
 [TOC]
 
 1. [华南理工大学本科生 $\\LaTeX$ 毕业论文模板](#华南理工大学本科生-latex-毕业论文模板)
    1. [介绍](#介绍)
-   2. [新增ppt模板 (2023.6.1修订)](#新增ppt模板-202361修订)
-   3. [修复页眉bug (2023.5.31修订)](#修复页眉bug-2023531修订)
-   4. [❗❗❗近期重要更新 (2024.4.15修订)](#近期重要更新-2024415修订)
+   2. [❗❗❗近期重要更新 (2024.4.15修订)](#近期重要更新-2024415修订)
       1. [更新方法](#更新方法)
+   3. [新增ppt模板 (2023.6.1修订)](#新增ppt模板-202361修订)
+   4. [修复页眉bug (2023.5.31修订)](#修复页眉bug-2023531修订)
    5. [如何编译](#如何编译)
       1. [texlive 编辑 (本地)](#texlive-编辑-本地)
    6. [TODO List](#todo-list)
