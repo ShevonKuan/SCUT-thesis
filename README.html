@@ -841,17 +841,17 @@ hue-6-2: #e6c07b
 \mainmatter
 </code></pre>
 </li>
-<li>可以使用<code>\makedisclaim[签名.png]</code>来指定签名图片，如果需要设置图片的位置详见<code>scutthesis.cls</code>文件中384行<pre><code class="language-latex">    <span class="hljs-keyword">\begin</span>{textblock}{5}(3.8,6.1) <span class="hljs-comment">% 指定图片的位置和大小</span>
-        <span class="hljs-keyword">\includegraphics</span>[height=2cm]{<span class="hljs-params">#1</span>}
-    <span class="hljs-keyword">\end</span>{textblock}
+<li>可以使用<code>\makedisclaim[签名.png]</code>来指定签名图片，如果需要设置图片的位置详见<code>scutthesis.cls</code>文件中384行<pre><code class="language-latex"><span class="hljs-keyword">\begin</span>{textblock}{5}(3.8,6.1) <span class="hljs-comment">% 指定图片的位置和大小</span>
+    <span class="hljs-keyword">\includegraphics</span>[height=2cm]{<span class="hljs-params">#1</span>}
+<span class="hljs-keyword">\end</span>{textblock}
 </code></pre>
 </li>
-<li>由于版权使用授权书需要手机号码和邮箱，请在<code>docs/info.tex</code>中加上这两行，不是的话可能编译失败<pre><code class="language-diff"> \cmajor{计算机科学与技术}
- \emajor{Computer Science and Technology}
- +\phonenum{13612345678}
- +\mailbox{202000000000@mail.scut.edu}
- % 指导老师
- \cmentor{王大明 \ (教授)}
+<li>由于版权使用授权书需要手机号码和邮箱，请在<code>docs/info.tex</code>中加上这两行，不是的话可能编译失败<pre><code class="language-diff">\cmajor{计算机科学与技术}
+\emajor{Computer Science and Technology}
+<span class="hljs-addition">+\phonenum{13612345678}</span>
+<span class="hljs-addition">+\mailbox{202000000000@mail.scut.edu}</span>
+% 指导老师
+\cmentor{王大明 \ (教授)}
 </code></pre>
 </li>
 </ol>
