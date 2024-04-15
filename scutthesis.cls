@@ -323,7 +323,7 @@
         \end{figure}
         \begin{center}
             \zihao{0}
-            \heiti{本科毕业设计（论文）}
+            \heiti{\vspace{-2.5em}本科毕业设计（论文）}
         \end{center}
         \begin{center}
             \zihao{1}
@@ -336,15 +336,16 @@
         \begin{center}
             \begin{spacing}{1.8}
                 \zihao{-3}
+                
                 \textbf{
                     \begin{tabular}{cc}
                         % [s] 两端对齐
-                        \makebox[2.2cm][s]{学院}   & \makebox[5cm]{\hfill\@cschool\hfill}                                  \\ \cline{2-2}
-                        \makebox[2.2cm][s]{专业}   & \makebox[5cm]{\hfill\@cmajor\hfill}                                   \\ \cline{2-2}
-                        \makebox[2.2cm][s]{学生姓名} & \makebox[5cm]{\hfill\@cauthor\hfill}                                  \\ \cline{2-2}
-                        \makebox[2.2cm][s]{学生学号} & \makebox[5cm]{\hfill\@studentid\hfill}                                \\ \cline{2-2}
-                        \makebox[2.2cm][s]{指导教师} & \makebox[5cm]{\hfill\@cmentor\hfill}                                  \\ \cline{2-2}
-                        \makebox[2.2cm][s]{提交日期} & \makebox[5cm]{\hfill\number\year 年\number\month 月\number\day 日\hfill} \\ \cline{2-2}
+                        \makebox[2.56cm][s]{学院}   & \makebox[5.72cm]{\hfill\@cschool\hfill}                                  \\ \cline{2-2}
+                        \makebox[2.56cm][s]{专业}   & \makebox[5.72cm]{\hfill\@cmajor\hfill}                                   \\ \cline{2-2}
+                        \makebox[2.56cm][s]{学生姓名} & \makebox[5.72cm]{\hfill\@cauthor\hfill}                                  \\ \cline{2-2}
+                        \makebox[2.56cm][s]{学生学号} & \makebox[5.72cm]{\hfill\@studentid\hfill}                                \\ \cline{2-2}
+                        \makebox[2.56cm][s]{指导教师} & \makebox[5.72cm]{\hfill\@cmentor\hfill}                                  \\ \cline{2-2}
+                        \makebox[2.56cm][s]{提交日期} & \makebox[5.72cm]{\hfill\number\year 年\number\month 月\number\day 日\hfill} \\ \cline{2-2}
                     \end{tabular}
                 }
             \end{spacing}
