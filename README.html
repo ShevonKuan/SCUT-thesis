@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>&#x534e;&#x5357;&#x7406;&#x5de5;&#x5927;&#x5b66;&#x672c;&#x79d1;&#x751f; &dollar;&bsol;LaTeX&dollar; &#x6bd5;&#x4e1a;&#x8bba;&#x6587;&#x6a21;&#x677f;</title>
-        <style>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x534e;&#x5357;&#x7406;&#x5de5;&#x5927;&#x5b66;&#x672c;&#x79d1;&#x751f; &dollar;&bsol;LaTeX&dollar; &#x6bd5;&#x4e1a;&#x8bba;&#x6587;&#x6a21;&#x677f;</title>
+            <style>
 /* From extension vscode.github */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -11,7 +11,9 @@
  *--------------------------------------------------------------------------------------------*/
 
 .vscode-dark img[src$=\#gh-light-mode-only],
-.vscode-light img[src$=\#gh-dark-mode-only] {
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
 	display: none;
 }
 
@@ -693,7 +695,7 @@ hue-6-2: #e6c07b
 }
 
 </style>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
@@ -715,21 +717,117 @@ hue-6-2: #e6c07b
     pointer-events: none;
 }
 </style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
         
-    </head>
-    <body class="vscode-body vscode-dark">
-        <h1 id="华南理工大学本科生-latex-毕业论文模板">华南理工大学本科生 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 毕业论文模板</h1>
+        </head>
+        <body class="vscode-body vscode-dark">
+            <h1 id="华南理工大学本科生-latex-毕业论文模板">华南理工大学本科生 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 毕业论文模板</h1>
 <h2 id="介绍">介绍</h2>
 <p>本项目借用中山大学<a href="https://github.com/Lovely-XPP/SYSU-thesis">Lovely-XPP/SYSU-thesis</a> 模板定义，重新构建了<code>scutthesis.cls</code>模板文件。这应该是最完善也是最容易使用的华工本科生论文模板了。</p>
 <p>(注：由于<code>newtext</code>宏包的原因，不支持Github Action在线编译)</p>
 <p>具体效果点<a href="./main.pdf">这里</a></p>
-<p><img src="https://raw.githubusercontent.com/ShevonKuan/images/main/image-20230410164539458.png" alt="image-20230410164539458"></p>
+<p><img src="file:///c:\Users\shevon\SCUT-thesis\demo.png" alt=""></p>
 <h2 id="新增ppt模板-202361修订">新增ppt模板 (2023.6.1修订)</h2>
 <p>见<a href="https://github.com/ShevonKuan/SCUT-thesis/tree/main/SCUTbeamer">这里</a>，相对于论文模板，需要更多的latex相关知识。
 <img src="https://raw.githubusercontent.com/ShevonKuan/images/main/202306011136427.png" alt=""></p>
 <h2 id="修复页眉bug-2023531修订">修复页眉bug (2023.5.31修订)</h2>
-<h2 id="近期重要更新-202356修订">❗❗❗近期重要更新 (2023.5.6修订)</h2>
-<p>学校教务处模板中添加了学位论文原创性声明，本模板已经更新，使用时请注意。若正在使用旧版本模板请参阅下面的更新方法</p>
+<h2 id="近期重要更新-2024415修订">❗❗❗近期重要更新 (2024.4.15修订)</h2>
+<p>23.10.10规范中学校教务处模板中添加了学位论文原创性声明和论文版权使用授权书，同时更改了封面的布局版式，感谢<a href="https://github.com/ShevonKuan/SCUT-thesis/issues/1"></a>的提醒，本模板已经更新，使用时请注意。若正在使用旧版本模板请参阅下面的更新方法</p>
 <h3 id="更新方法">更新方法</h3>
 <ol>
 <li>点击<a href="https://github.com/ShevonKuan/SCUT-thesis/blob/main/scutthesis.cls">这里</a>下载最新的<code>scutthesis.cls</code>文件</li>
@@ -760,7 +858,7 @@ hue-6-2: #e6c07b
 <li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
 <li><a href="#%E6%96%B0%E5%A2%9Eppt%E6%A8%A1%E6%9D%BF-202361%E4%BF%AE%E8%AE%A2">新增ppt模板 (2023.6.1修订)</a></li>
 <li><a href="#%E4%BF%AE%E5%A4%8D%E9%A1%B5%E7%9C%89bug-2023531%E4%BF%AE%E8%AE%A2">修复页眉bug (2023.5.31修订)</a></li>
-<li><a href="#%E8%BF%91%E6%9C%9F%E9%87%8D%E8%A6%81%E6%9B%B4%E6%96%B0-202356%E4%BF%AE%E8%AE%A2">❗❗❗近期重要更新 (2023.5.6修订)</a>
+<li><a href="#%E8%BF%91%E6%9C%9F%E9%87%8D%E8%A6%81%E6%9B%B4%E6%96%B0-2024415%E4%BF%AE%E8%AE%A2">❗❗❗近期重要更新 (2024.4.15修订)</a>
 <ol>
 <li><a href="#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95">更新方法</a></li>
 </ol>
@@ -1166,7 +1264,7 @@ print(formula)
 <span class="hljs-keyword">\inputcode</span>{cpp}{code/demo.cpp}
 </code></pre>
 
-        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
-        
-    </body>
-    </html>
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
