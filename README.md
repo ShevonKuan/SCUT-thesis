@@ -2,7 +2,6 @@
 
 ## 介绍
 
-![SCUT-thesis](https://socialify.git.ci/ShevonKuan/SCUT-thesis/image?description=1&descriptionEditable=(%E6%9B%B4%E6%96%B0%E4%BA%8E2024%E5%B9%B4)%20%E5%8D%8E%E5%8D%97%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%20LaTeX%20%E8%AE%BA%E6%96%87%E6%A8%A1%E6%9D%BF%E9%A1%B9%E7%9B%AE&font=Bitter&forks=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FShevonKuan%2Fimages%2Fmain%2FSCUT%E5%8D%95%E8%89%B2%E6%A0%A1%E5%BE%BD.svg&name=1&pattern=Solid&pulls=1&stargazers=1&theme=Light)
 本项目借用中山大学[Lovely-XPP/SYSU-thesis](https://github.com/Lovely-XPP/SYSU-thesis) 模板定义，重新构建了`scutthesis.cls`模板文件。这应该是最完善也是最容易使用的华工本科生论文模板了。
 
 (注：由于`newtext`宏包的原因，不支持Github Action在线编译)
