@@ -46,6 +46,16 @@
             \includegraphics[height=2cm]{#1}
         \end{textblock}
     ```
+5. 由于版权使用授权书需要手机号码和邮箱，请在`docs/info.tex`中加上这两行，不是的话可能编译失败
+   ```latex
+    \cmajor{计算机科学与技术}
+    \emajor{Computer Science and Technology}
+    +\phonenum{13612345678}
+    +\mailbox{202000000000@mail.scut.edu}
+    % 指导老师
+    \cmentor{王大明 \ (教授)}
+   ```
+
 
 [TOC]
 
