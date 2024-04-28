@@ -1,7 +1,7 @@
 src = main
 
 pdf: clean main.tex main.bib
-	latexmk $(src) -shell-escape
+	latexmk $(src) -shell-escape -xelatex
 
 show:
 	xdg-open $(src).pdf
