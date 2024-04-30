@@ -819,60 +819,25 @@ hue-6-2: #e6c07b
             <h1 id="华南理工大学本科生-latex-毕业论文模板">华南理工大学本科生 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 毕业论文模板</h1>
 <h2 id="介绍">介绍</h2>
 <p>本项目借用中山大学<a href="https://github.com/Lovely-XPP/SYSU-thesis">Lovely-XPP/SYSU-thesis</a> 模板定义，重新构建了<code>scutthesis.cls</code>模板文件。这应该是最完善也是最容易使用的华工本科生论文模板了。</p>
-<p>(注：由于<code>newtext</code>宏包的原因，不支持Github Action在线编译)</p>
+<p>(注：由于<code>newtext</code>宏包的原因，不支持 Github Action 在线编译)</p>
 <p>具体效果点<a href="./main.pdf">这里</a></p>
-<p><img src="file:///c:\Users\shevon\SCUT-thesis\demo.png" alt=""></p>
-<h2 id="近期重要更新-2024415修订">❗❗❗近期重要更新 (2024.4.15修订)</h2>
-<p>23.10.10规范中学校教务处模板中添加了学位论文原创性声明和论文版权使用授权书，同时更改了封面的布局版式，感谢<a href="https://github.com/ShevonKuan/SCUT-thesis/issues/1"></a>的提醒，本模板已经更新，使用时请注意。若正在使用旧版本模板请参阅下面的更新方法</p>
-<h3 id="更新方法">更新方法</h3>
-<ol>
-<li>点击<a href="https://github.com/ShevonKuan/SCUT-thesis/blob/main/scutthesis.cls">这里</a>下载最新的<code>scutthesis.cls</code>文件</li>
-<li>将下载的<code>scutthesis.cls</code>文件替换掉原来的文件</li>
-<li>在正文区添加<code>\makedisclaim</code>命令，如下<pre><code class="language-diff">\begin{document}
-% 论文前置部分
-\frontmatter
-\pagenumbering{Roman}
-\makeUndergraduateCover    % 生成封面
-<span class="hljs-addition">+\makedisclaim           % 生成学位论文原创性声明</span>
-\makeabstract       % 生成中英文摘要
-\maketableofcontents        % 生成目录
-\makelistoffiguretable % 生成图表目录
-% 论文主体部分
-\mainmatter
-</code></pre>
-</li>
-<li>可以使用<code>\makedisclaim[签名.png]</code>来指定签名图片，如果需要设置图片的位置详见<code>scutthesis.cls</code>文件中384行<pre><code class="language-latex"><span class="hljs-keyword">\begin</span>{textblock}{5}(3.8,6.1) <span class="hljs-comment">% 指定图片的位置和大小</span>
-    <span class="hljs-keyword">\includegraphics</span>[height=2cm]{<span class="hljs-params">#1</span>}
-<span class="hljs-keyword">\end</span>{textblock}
-</code></pre>
-</li>
-<li>由于版权使用授权书需要手机号码和邮箱，请在<code>docs/info.tex</code>中加上这两行，不是的话可能编译失败<pre><code class="language-diff">\cmajor{计算机科学与技术}
-\emajor{Computer Science and Technology}
-<span class="hljs-addition">+\phonenum{13612345678}</span>
-<span class="hljs-addition">+\mailbox{202000000000@mail.scut.edu}</span>
-% 指导老师
-\cmentor{王大明 \ (教授)}
-</code></pre>
-</li>
-</ol>
-<h2 id="新增ppt模板-202361修订">新增ppt模板 (2023.6.1修订)</h2>
-<p>见<a href="https://github.com/ShevonKuan/SCUT-thesis/tree/main/SCUTbeamer">这里</a>，相对于论文模板，需要更多的latex相关知识。
-<img src="https://raw.githubusercontent.com/ShevonKuan/images/main/202306011136427.png" alt=""></p>
-<h2 id="修复页眉bug-2023531修订">修复页眉bug (2023.5.31修订)</h2>
-<p>[TOC]</p>
+<p><img src="file:////Users/shevon/Desktop/Temp/SCUT-thesis/demo.png" alt=""></p>
+<h2 id="目录">目录</h2>
 <ol>
 <li><a href="#%E5%8D%8E%E5%8D%97%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F-latex-%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E6%A8%A1%E6%9D%BF">华南理工大学本科生 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace linebreak="newline"></mspace><mi>L</mi><mi>a</mi><mi>T</mi><mi>e</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">\\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 毕业论文模板</a>
 <ol>
 <li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
-<li><a href="#%E8%BF%91%E6%9C%9F%E9%87%8D%E8%A6%81%E6%9B%B4%E6%96%B0-2024415%E4%BF%AE%E8%AE%A2">❗❗❗近期重要更新 (2024.4.15修订)</a>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#-%E8%BF%91%E6%9C%9F%E9%87%8D%E8%A6%81%E6%9B%B4%E6%96%B0-2024415-%E4%BF%AE%E8%AE%A2">❗❗❗ 近期重要更新 (2024.4.15 修订)</a>
 <ol>
 <li><a href="#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95">更新方法</a></li>
 </ol>
 </li>
-<li><a href="#%E6%96%B0%E5%A2%9Eppt%E6%A8%A1%E6%9D%BF-202361%E4%BF%AE%E8%AE%A2">新增ppt模板 (2023.6.1修订)</a></li>
-<li><a href="#%E4%BF%AE%E5%A4%8D%E9%A1%B5%E7%9C%89bug-2023531%E4%BF%AE%E8%AE%A2">修复页眉bug (2023.5.31修订)</a></li>
+<li><a href="#%E6%96%B0%E5%A2%9E-ppt-%E6%A8%A1%E6%9D%BF-202361-%E4%BF%AE%E8%AE%A2">新增 ppt 模板 (2023.6.1 修订)</a></li>
+<li><a href="#%E4%BF%AE%E5%A4%8D%E9%A1%B5%E7%9C%89-bug-2023531-%E4%BF%AE%E8%AE%A2">修复页眉 bug (2023.5.31 修订)</a></li>
 <li><a href="#%E5%A6%82%E4%BD%95%E7%BC%96%E8%AF%91">如何编译</a>
 <ol>
+<li><a href="#vscode%E7%BC%96%E8%AF%91%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90"><code>vscode</code>编译（强烈推荐）</a></li>
 <li><a href="#texlive-%E7%BC%96%E8%BE%91-%E6%9C%AC%E5%9C%B0">texlive 编辑 (本地)</a></li>
 </ol>
 </li>
@@ -898,17 +863,17 @@ hue-6-2: #e6c07b
 <ol>
 <li><a href="#%E5%B0%81%E9%9D%A2%E8%AE%BA%E6%96%87%E6%A0%87%E9%A2%98">封面论文标题</a></li>
 <li><a href="#%E6%91%98%E8%A6%81%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D">摘要和关键词</a></li>
-<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E7%9B%AE%E5%BD%95-1">目录</a></li>
 <li><a href="#%E6%AD%A3%E6%96%87">正文</a></li>
 </ol>
 </li>
 <li><a href="#%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E8%AE%BA%E6%96%87%E5%AE%8C%E6%88%90%E5%90%8E%E7%9A%84%E6%89%93%E5%8D%B0">毕业设计（论文）完成后的打印</a></li>
 </ol>
 </li>
-<li><a href="#%E8%87%B4%E8%B0%A2">❤致谢</a></li>
-<li><a href="#%E9%94%99%E8%AF%AF%E5%8F%8D%E9%A6%88%E4%BB%A5%E5%8F%8A%E6%94%B9%E8%BF%9B">🤖错误反馈以及改进</a></li>
-<li><a href="#%E5%A3%B0%E6%98%8E">🎯声明</a></li>
-<li><a href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8">⭐如何使用⭐</a>
+<li><a href="#-%E8%87%B4%E8%B0%A2">❤ 致谢</a></li>
+<li><a href="#-%E9%94%99%E8%AF%AF%E5%8F%8D%E9%A6%88%E4%BB%A5%E5%8F%8A%E6%94%B9%E8%BF%9B">🤖 错误反馈以及改进</a></li>
+<li><a href="#-%E5%A3%B0%E6%98%8E">🎯 声明</a></li>
+<li><a href="#-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-">⭐ 如何使用 ⭐</a>
 <ol>
 <li><a href="#maintex"><code>main.tex</code></a></li>
 <li><a href="#%E5%AD%97%E4%BD%93%E5%AD%97%E5%8F%B7%E7%AD%89%E6%A0%BC%E5%BC%8F%E8%AE%BE%E7%BD%AE">字体字号等格式设置</a>
@@ -943,7 +908,177 @@ hue-6-2: #e6c07b
 </ol>
 </li>
 </ol>
+<h2 id="-近期重要更新-2024415-修订">❗❗❗ 近期重要更新 (2024.4.15 修订)</h2>
+<ol>
+<li>23.10.10 规范中学校教务处模板中添加了学位论文原创性声明和论文版权使用授权书，同时更改了封面的布局版式，感谢<a href="https://github.com/ShevonKuan/SCUT-thesis/issues/1"></a>的提醒，本模板已经更新，使用时请注意。若正在使用旧版本模板请参阅下面的更新方法。</li>
+<li>根据<a href="https://github.com/ShevonKuan/SCUT-thesis/issues/2">#2</a></li>
+</ol>
+<h3 id="更新方法">更新方法</h3>
+<ol>
+<li>点击<a href="https://github.com/ShevonKuan/SCUT-thesis/blob/main/scutthesis.cls">这里</a>下载最新的<code>scutthesis.cls</code>文件</li>
+<li>将下载的<code>scutthesis.cls</code>文件替换掉原来的文件</li>
+<li>在正文区添加<code>\makedisclaim</code>命令，如下<pre><code class="language-diff">\begin{document}
+% 论文前置部分
+\frontmatter
+\pagenumbering{Roman}
+\makeUndergraduateCover    % 生成封面
+<span class="hljs-addition">+\makedisclaim           % 生成学位论文原创性声明</span>
+\makeabstract       % 生成中英文摘要
+\maketableofcontents        % 生成目录
+\makelistoffiguretable % 生成图表目录
+% 论文主体部分
+\mainmatter
+</code></pre>
+</li>
+<li>可以使用<code>\makedisclaim[签名.png]</code>来指定签名图片，如果需要设置图片的位置详见<code>scutthesis.cls</code>文件中 384 行<pre><code class="language-latex"><span class="hljs-keyword">\begin</span>{textblock}{5}(3.8,6.1) <span class="hljs-comment">% 指定图片的位置和大小</span>
+    <span class="hljs-keyword">\includegraphics</span>[height=2cm]{<span class="hljs-params">#1</span>}
+<span class="hljs-keyword">\end</span>{textblock}
+</code></pre>
+</li>
+<li>由于版权使用授权书需要手机号码和邮箱，请在<code>docs/info.tex</code>中加上这两行，不是的话可能编译失败<pre><code class="language-diff">\cmajor{计算机科学与技术}
+\emajor{Computer Science and Technology}
+<span class="hljs-addition">+\phonenum{13612345678}</span>
+<span class="hljs-addition">+\mailbox{202000000000@mail.scut.edu}</span>
+% 指导老师
+\cmentor{王大明 \ (教授)}
+</code></pre>
+</li>
+</ol>
+<h2 id="新增-ppt-模板-202361-修订">新增 ppt 模板 (2023.6.1 修订)</h2>
+<p>见<a href="https://github.com/ShevonKuan/SCUT-thesis/tree/main/SCUTbeamer">这里</a>，相对于论文模板，需要更多的 latex 相关知识。
+<img src="https://raw.githubusercontent.com/ShevonKuan/images/main/202306011136427.png" alt=""></p>
+<h2 id="修复页眉-bug-2023531-修订">修复页眉 bug (2023.5.31 修订)</h2>
 <h2 id="如何编译">如何编译</h2>
+<h3 id="vscode编译强烈推荐"><code>vscode</code>编译（强烈推荐）</h3>
+<p>极力推荐使用<code>vscode</code>作为编辑器，真的不要再用<code>TexStudio</code>这种老古董了，<code>vscode</code>的插件生态非常好，而且有非常多的自定义功能（例如字数统计等），写 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 简直不要太爽。</p>
+<ol>
+<li>安装<code>vscode</code>，安装<code>LaTeX Workshop</code>插件，安装<code>LaTeX Utilities</code>插件；</li>
+<li>在<code>settings.json</code>配置文件（按住<code>ctrl+shift+p</code>或者<code>⌘+shift+p</code>打开命令列表，输入<code>json</code>选择<code>Preferences: Open User Settings (JSON)</code>），中添加以下配置<pre><code class="language-json"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;latex-workshop.latex.tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-comment">// 编译工具和命令</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                <span class="hljs-string">&quot;-synctex=1&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-interaction=nonstopmode&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-file-line-error&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-shell-escape&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;%DOCFILE%&quot;</span>
+            <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;latexmk&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;latexmk&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                <span class="hljs-string">&quot;-xelatex&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-synctex=1&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-interaction=nonstopmode&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-file-line-error&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-shell-escape&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;%DOCFILE%&quot;</span>
+            <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;latexmk_pdf&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;latexmk&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                <span class="hljs-string">&quot;-pdf&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-synctex=1&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-interaction=nonstopmode&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-file-line-error&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-shell-escape&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;%DOCFILE%&quot;</span>
+            <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;pdflatex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;pdflatex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                <span class="hljs-string">&quot;-synctex=1&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-interaction=nonstopmode&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-file-line-error&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;%DOCFILE%&quot;</span>
+            <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;bibtex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;bibtex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;%DOCFILE%&quot;</span><span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;texindy&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;texindy&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;%DOCFILE%.idx&quot;</span><span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;makeindex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;makeindex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                <span class="hljs-string">&quot;%DOCFILE%.nlo&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-s&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;nomencl.ist&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;-o&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;%DOCFILE%.nls&quot;</span>
+            <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;latex-workshop.latex.recipes&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Auto Compile [XeLaTex]&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;latexmk&quot;</span><span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Auto Compile [pdfLaTex]&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;latexmk_pdf&quot;</span><span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Full_Compile [XeLaTex]&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;makeindex&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;texindy&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;xelatex&quot;</span>
+            <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Full_Compile_bibtex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;bibtex&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;makeindex&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;texindy&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-string">&quot;xelatex&quot;</span>
+            <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;pdflatex&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;pdflatex&quot;</span><span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;xe-&gt;bib-&gt;xe-&gt;xe&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;bibtex&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;xelatex&quot;</span><span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;pdf-&gt;bib-&gt;pdf-&gt;pdf&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;tools&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;pdflatex&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;bibtex&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;pdflatex&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;pdflatex&quot;</span><span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;latex-workshop.latex.autoClean.run&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;onFailed&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;latex-workshop.latex.recipe.default&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;lastUsed&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;latex-workshop.showContextMenu&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;latex-workshop.intellisense.package.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+</li>
+<li>在<code>vscode</code>中打开<code>main.tex</code>文件，按<code>ctrl+alt+b</code>或者<code>⌘+alt+b</code>选择<code>Auto Compile [XeLaTex]</code>即可编译。<img src="file:////Users/shevon/Desktop/Temp/SCUT-thesis/vscode.png" alt=""></li>
+</ol>
 <h3 id="texlive-编辑-本地">texlive 编辑 (本地)</h3>
 <p>本模板需要使用 <code>texlive(&gt;=2020)</code> 进行编译，编译命令如下：</p>
 <pre><code class="language-shell">make pdf
@@ -952,12 +1087,12 @@ hue-6-2: #e6c07b
 <p>若不支持<code>makefile</code>可以使用命令</p>
 <pre><code class="language-shell">latexmk main.tex -shell-escape
 </code></pre>
-<p>编译需要python环境和<code>pygments</code>宏包用于代码高亮，若不需要代码环境请在<code>scutthesis.cls</code>文件中删除<code>minted</code>相关代码。</p>
+<p>编译需要 python 环境和<code>pygments</code>宏包用于代码高亮，若不需要代码环境请在<code>scutthesis.cls</code>文件中删除<code>minted</code>相关代码。</p>
 <p>安装<code>texlive</code>后部分系统需要安装<code>perl</code>依赖</p>
 <pre><code class="language-shell">dnf install -y python3-pip perl fontconfig-devel perl-YAML-Tiny
 pip3 install pygments
 </code></pre>
-<p>windows用户可直接执行</p>
+<p>windows 用户可直接执行</p>
 <pre><code class="language-bat">pip install pygments
 </code></pre>
 <h2 id="todo-list">TODO List</h2>
@@ -967,7 +1102,7 @@ pip3 install pygments
 <p>希望大家踊跃提出自己的想法，提交 pr，一起完善该 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 模板， Make <strong>SCUT</strong> Great Again！</p>
 <h2 id="相关规范">相关规范</h2>
 <h3 id="毕业设计论文类型及基本要求">毕业设计（论文）类型及基本要求</h3>
-<p>实验研究类：学生必须独立完成一项研究性的实验，取得足够的实验数据，实验要有探索性，而不是简单重复已有的工作。撰写一篇<strong>15000字数以上</strong>的研究报告或论文。</p>
+<p>实验研究类：学生必须独立完成一项研究性的实验，取得足够的实验数据，实验要有探索性，而不是简单重复已有的工作。撰写一篇<strong>15000 字数以上</strong>的研究报告或论文。</p>
 <h3 id="毕业设计论文资料基本组成">毕业设计（论文）资料基本组成</h3>
 <p>需装入档案袋并提交给学院保存的毕业设计（论文）材料包括：</p>
 <ul class="contains-task-list">
@@ -989,9 +1124,9 @@ pip3 install pygments
 <li>论文题目
 论文题目应突出重点、简明扼要，能恰当概括论文主要内容，要有较强的科学性和前瞻性、可行性，必要时可增加副标题。</li>
 <li>摘要
-摘要是简明、确切地记述毕业设计（论文）工作重要内容的短文。其基本要素包括<strong>研究的目的</strong>、<strong>方法</strong>、<strong>结果（结论）<strong>和</strong>论文的意义</strong>等。应避免将摘要写成目录式的内容介绍。<strong>论文摘要要求400-600字</strong>。摘要页不需写出论文题目。英文摘要与中文摘要的内容应完全一致，在英文语法、用词上应正确无误。</li>
+摘要是简明、确切地记述毕业设计（论文）工作重要内容的短文。其基本要素包括<strong>研究的目的</strong>、<strong>方法</strong>、<strong>结果（结论）<strong>和</strong>论文的意义</strong>等。应避免将摘要写成目录式的内容介绍。<strong>论文摘要要求 400-600 字</strong>。摘要页不需写出论文题目。英文摘要与中文摘要的内容应完全一致，在英文语法、用词上应正确无误。</li>
 <li>关键词
-关键词是能覆盖论文主要内容的词条。<strong>关键词要求3-5个</strong>，按<strong>词条概念外延层次由左到右排列</strong>。英文关键词与中文关键词的内容应完全一致，在英文语法、用词上应正确无误。</li>
+关键词是能覆盖论文主要内容的词条。<strong>关键词要求 3-5 个</strong>，按<strong>词条概念外延层次由左到右排列</strong>。英文关键词与中文关键词的内容应完全一致，在英文语法、用词上应正确无误。</li>
 <li>目录
 目录按章、节、条序号和标题编写，一般为二级或三级，要求标题层次清晰，<strong>包含摘要（中、英文）、正文各章节标题、结论、参考文献、附录、致谢等。</strong></li>
 <li>论文（说明书）正文
@@ -1000,7 +1135,7 @@ pip3 install pygments
 <li><strong>论文主体</strong>是毕业论文的主要部分。对研<strong>究问题的论述</strong>及<strong>系统分析</strong>，比较研究，<strong>模型或方案设计</strong>，<strong>案例论证或实证分析</strong>，<strong>模型运行的结果分析或建议</strong>，<strong>改进措施</strong>等</li>
 <li><strong>结论</strong>是对整个研究工作的总结，应写得精炼、准确、完整。在结论中应明确指出本研究的<strong>创新性</strong>、<strong>应用前景</strong>及其对<strong>社会经济的影响</strong>，可阐述本课题研究中<strong>尚存在的问题</strong>及进一步<strong>开展研究的见解和建议</strong>等。</li>
 <li>参考文献
-<strong>主要参考文献要求10篇</strong>以上，其中<strong>外文文献2篇</strong>以上（指导教师认定为特殊类型的论文，可以不列外文参考文献）。</li>
+<strong>主要参考文献要求 10 篇</strong>以上，其中<strong>外文文献 2 篇</strong>以上（指导教师认定为特殊类型的论文，可以不列外文参考文献）。</li>
 <li>注释
 论文中有个别名称或情况需要解释时，可加注说明，<strong>注释可用页末注</strong>（将注文放在加注页稿纸的下端）或<strong>篇末注</strong>（将全部注文几种在文章末尾），而不可用行中注（即注文夹在正文中）。</li>
 <li>附录
@@ -1013,46 +1148,46 @@ pip3 install pygments
 <h5 id="电子文档">电子文档</h5>
 <p>毕业设计（论文）材料中所有文件资料，<strong>均应完整有序地刻入光盘</strong>，以供存档。</p>
 <h5 id="开题报告文献综述">开题报告（文献综述）</h5>
-<p>开题报告是保证毕业论文质量的一个重要环节，学生在教师指导下，<strong>通过调研和查阅文献（需要10篇以上相关文章的阅读量）</strong>，在指导教师指导下完成。开题报告需经过各系或论文指导小组讨论、学院教学指导委员会审查合格后，方可正式进入下一步毕业设计（论文）阶段。
-<strong>开题报告撰写不少于2500字</strong>，内容包括工作任务分析、调研报告、方案拟定与分析、论文框架结构、实施计划、文献综述等。</p>
+<p>开题报告是保证毕业论文质量的一个重要环节，学生在教师指导下，<strong>通过调研和查阅文献（需要 10 篇以上相关文章的阅读量）</strong>，在指导教师指导下完成。开题报告需经过各系或论文指导小组讨论、学院教学指导委员会审查合格后，方可正式进入下一步毕业设计（论文）阶段。
+<strong>开题报告撰写不少于 2500 字</strong>，内容包括工作任务分析、调研报告、方案拟定与分析、论文框架结构、实施计划、文献综述等。</p>
 <h5 id="外文翻译表及外文原件">外文翻译表及外文原件</h5>
-<p>学生必须<strong>阅读5篇（或5万印刷符）以上的外文参考资料</strong>。提交<strong>5000汉字（或2万印刷符）以上的外文翻译</strong>。翻译外文内容必须与毕业设计（论文）有紧密联系，并说明出处。原文如系网上下载，无法提供原文复印件时，则应注明下载的网址、网站、题名、文献发表时间等。</p>
+<p>学生必须<strong>阅读 5 篇（或 5 万印刷符）以上的外文参考资料</strong>。提交<strong>5000 汉字（或 2 万印刷符）以上的外文翻译</strong>。翻译外文内容必须与毕业设计（论文）有紧密联系，并说明出处。原文如系网上下载，无法提供原文复印件时，则应注明下载的网址、网站、题名、文献发表时间等。</p>
 <h3 id="毕业设计论文格式要求">毕业设计（论文）格式要求</h3>
 <h5 id="封面论文标题">封面论文标题</h5>
 <p>论文封面均使用中文撰写。二号，黑体，加粗，居中。</p>
 <h5 id="摘要和关键词">摘要和关键词</h5>
 <p>摘要、关键词使用中文和所学专业相应的语言对照撰写。
 中文摘要标题：小二号黑体，居中，单倍行距；
-中文摘要内容：小四号，宋体，1.5倍行距，段首行空两个汉字；
+中文摘要内容：小四号，宋体，1.5 倍行距，段首行空两个汉字；
 中文关键词标题：小四号黑体居左；
 中文关键词内容：小四号，宋体。关键词之间用分号隔开，最后一个关键词不打标点符号。
-英文摘要、关键词标题及内容：字号与中文摘要相同，字体为Times New Roman。</p>
-<h5 id="目录">目录</h5>
+英文摘要、关键词标题及内容：字号与中文摘要相同，字体为 Times New Roman。</p>
+<h5 id="目录-1">目录</h5>
 <p>目录中的标题应与正文中的标题一致，标明的页码应与论文文本的页码相对应。
 目录标题：小二号黑体，居中，单倍行距。
-目录中各章题序及标题：四号黑体，居左，1.5倍行距；
-各次级标题及题序：小四号，宋体，居左，1.5倍行距。</p>
+目录中各章题序及标题：四号黑体，居左，1.5 倍行距；
+各次级标题及题序：小四号，宋体，居左，1.5 倍行距。</p>
 <h5 id="正文">正文</h5>
 <ol>
 <li>各级标题及正文
 采用三级标题排序，不得使用标点符号，各级标题均单独占一行书写，各层次题序及标题不得置于页面的最后一行（孤行）。
-工科、理科类专业的论文，章节编号一般采用三级标题的层次，按章（如“第一章”）、节（如“1.1”）、条（如“1.1.1”）的格式编写，各章题序的阿拉伯数字用Times New Roman体。
+工科、理科类专业的论文，章节编号一般采用三级标题的层次，按章（如“第一章”）、节（如“1.1”）、条（如“1.1.1”）的格式编写，各章题序的阿拉伯数字用 Times New Roman 体。
 第一级：用“第一章”、“第二章”、“第三章”等表示；小二号黑体，居中，单倍行距；
 第二级：用“1.1”、“1.2”、“1.3”等表示；小三号，黑体，居左，单倍行距；
 第三级：用“1.1.1”、“1.1.2”、“1.1.3”等表示；四号，黑体，居左，单倍行距；
-正文：小四号，宋体，1.5倍行距。段首行缩进2个汉字。
-英文单词：字号、行距与正文相同，字体为Times New Roman。</li>
+正文：小四号，宋体，1.5 倍行距。段首行缩进 2 个汉字。
+英文单词：字号、行距与正文相同，字体为 Times New Roman。</li>
 <li>插图和插表
-（1）	插图（表）应有图（表）题（由序号和标题组成），图（表）号按章编序，如第一章第一图的号为“图1-1”。图题置于图下方，表题置于表上方。
-（2）	插图与其图题不得拆开排写于两页。图中若有分图时，分图号用“a)”、“b)”等置于分图之下。有数字标注的坐标图，必须注明坐标单位。
-（3）	表格不加左、右列线；表内数字空缺的格内加“—”字线；如某个表格需要换页接排，在随后的各页上应重复表的编排，编号后跟标题和（续）。如：表2-1  加入激素后的实验结果比较（续）。
-（4）	插图（表）的标题和文字：五号，宋体。</li>
+（1） 插图（表）应有图（表）题（由序号和标题组成），图（表）号按章编序，如第一章第一图的号为“图 1-1”。图题置于图下方，表题置于表上方。
+（2） 插图与其图题不得拆开排写于两页。图中若有分图时，分图号用“a)”、“b)”等置于分图之下。有数字标注的坐标图，必须注明坐标单位。
+（3） 表格不加左、右列线；表内数字空缺的格内加“—”字线；如某个表格需要换页接排，在随后的各页上应重复表的编排，编号后跟标题和（续）。如：表 2-1 加入激素后的实验结果比较（续）。
+（4） 插图（表）的标题和文字：五号，宋体。</li>
 <li>参考文献
-（1）	字号、字体与行距
+（1） 字号、字体与行距
 参考文献标题用小二号黑体，居中，单倍行距；
-参考文献和注释正文为小四号，宋体，1.5倍行距。
+参考文献和注释正文为小四号，宋体，1.5 倍行距。
 正文中应按顺序在引用参考文献处的文字右上角用[]标明，[]中序号应与参考文献中序号一致。
-（2）	中文参考文献书写格式
+（2） 中文参考文献书写格式
 专著：[序号] 作者名. 书名[M]. 出版地：出版单位，出版年：引文页码.
 期刊：[序号] 作者名. 题名[J]. 刊名，年，卷号(期号)：所引用的文献在期刊中的起止页码.
 报纸：[序号] 作者名. 题名[N]. 报刊名，年－月－日(版次) .
@@ -1062,43 +1197,43 @@ pip3 install pygments
 报告：［序号］作者．文献题名[R]．报告地：报告会主办单位,年份.
 电子文献：［序号］作者．电子文献题名[文献类型/载体类型]．文献网址或出处,发表或更新日期/引用日期(任选).
 学位论文：[序号] 作者名. 题名[D]. 授予单位所在地：授予单位，授予年.
-（3）	外文参考文献书写格式按语言所在国学术界通行的格式。
-（4）	参考文献作者三名以内的全部列出，四名以上的列前三名，中文后加“等”,英文后加“et al”。</li>
+（3） 外文参考文献书写格式按语言所在国学术界通行的格式。
+（4） 参考文献作者三名以内的全部列出，四名以上的列前三名，中文后加“等”,英文后加“et al”。</li>
 <li>附录
 附录标题用小二号黑体，居中，单倍行距；
 附录文献正文为小四号宋体。</li>
 <li>名词术语和字母
 论文名词术语必须前后统一。
 采用英语缩写词时，除本行业广泛应用的通用缩写词外，文中第一次出现的缩写词应用括号注明英文全文。
-文中代表变量的英文字母必须用斜体，其它用正体。微分号d、圆周率π、自然底数e、矩阵转置T均应为正体。</li>
+文中代表变量的英文字母必须用斜体，其它用正体。微分号 d、圆周率 π、自然底数 e、矩阵转置 T 均应为正体。</li>
 <li>数字
-文中除习惯上用中文数字表示的以外，一般均采用阿拉伯数字，年份一概写全数，如“2015年”不可以写成“15年”。</li>
+文中除习惯上用中文数字表示的以外，一般均采用阿拉伯数字，年份一概写全数，如“2015 年”不可以写成“15 年”。</li>
 <li>页眉页脚
-页眉标注从论文主体部分（绪论、正文、结论）开始。页眉分奇、偶页标注，其中偶数页的页眉为“华南理工大学学士学位论文”；奇数页的页眉为章序及章标题，例如：  “第三章 城市道路的景观设计研究”。页眉的上边距为15mm，在版心上边线加一行1.0磅粗的实线，其上居中打印页眉；页脚的下边距为15mm。</li>
+页眉标注从论文主体部分（绪论、正文、结论）开始。页眉分奇、偶页标注，其中偶数页的页眉为“华南理工大学学士学位论文”；奇数页的页眉为章序及章标题，例如： “第三章 城市道路的景观设计研究”。页眉的上边距为 15mm，在版心上边线加一行 1.0 磅粗的实线，其上居中打印页眉；页脚的下边距为 15mm。</li>
 <li>页码
 论文页码从主体部分（绪论、正文、结论）开始，直至“参考文献、附录、致谢”结束，用五号阿拉伯数字编连续码，页码位于页脚居中。摘要、目录、图表清单、主要符号表用五号罗马数字编连续码，页码位于页脚居中。封面不编入页码。</li>
 </ol>
 <h3 id="毕业设计论文完成后的打印">毕业设计（论文）完成后的打印</h3>
-<p>毕业设计（论文）由学生本人编排并打印在标准A4纸上；论文封面（底）、摘要和目录实行单面打印；论文主体部分（引言、正文、结论、参考文献、附录）实行双面打印。
-封面学校标题用蓝色打印。论文封面纸推荐用210g/m2的橙色色书。所有页面的上下左右页面边距为25mm。
+<p>毕业设计（论文）由学生本人编排并打印在标准 A4 纸上；论文封面（底）、摘要和目录实行单面打印；论文主体部分（引言、正文、结论、参考文献、附录）实行双面打印。
+封面学校标题用蓝色打印。论文封面纸推荐用 210g/m2 的橙色色书。所有页面的上下左右页面边距为 25mm。
 毕业设计（论文）任务书、中期评价表、论文审阅表、论文评阅表、总评分及评语表在毕业设计（论文）管理系统下载打印。
 毕业设计（论文）开题报告、外文翻译表、论文格式范例在毕业设计管理系统主页下载使用。</p>
-<h2 id="致谢">❤致谢</h2>
+<h2 id="-致谢">❤ 致谢</h2>
 <ol>
 <li>十分感谢<a href="https://github.com/Lovely-XPP">@Lovely-XPP</a>完善的<a href="https://github.com/Lovely-XPP/SYSU-thesis">非官方的中山大学本科论文 LaTex 模板</a></li>
 </ol>
-<h2 id="错误反馈以及改进">🤖错误反馈以及改进</h2>
+<h2 id="-错误反馈以及改进">🤖 错误反馈以及改进</h2>
 <ol>
-<li>同学们如果在编译或者使用过程中遇到了一些问题，请参照<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way">这里</a>的步骤尝试解决问题。如果还是没法解决，请开一个新issue汇报错误。</li>
-<li>如果您想参与项目的维护，我们强烈建议您发起访问请求(Access request)到本项目，即可成为本项目的开发人员! 我们<em><strong>非常欢迎校友的加入</strong></em>。
-或者，Fork本仓库到您的 github 仓库中，修改完成后给本项目提交<code>Merge Request</code>。</li>
+<li>同学们如果在编译或者使用过程中遇到了一些问题，请参照<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way">这里</a>的步骤尝试解决问题。如果还是没法解决，请开一个新 issue 汇报错误。</li>
+<li>如果您想参与项目的维护，我们强烈建议您发起访问请求(Access request)到本项目，即可成为本项目的开发人员! 我们**<em>非常欢迎校友的加入</em>**。
+或者，Fork 本仓库到您的 github 仓库中，修改完成后给本项目提交<code>Merge Request</code>。</li>
 </ol>
-<h2 id="声明">🎯声明</h2>
+<h2 id="-声明">🎯 声明</h2>
 <ol>
-<li>您可以任意地使用和修改这个模板，但该模板可能无法满足最新的《附件1：本科毕业设计（论文）撰写规范（工科、理科类专业).doc》。</li>
+<li>您可以任意地使用和修改这个模板，但该模板可能无法满足最新的《附件 1：本科毕业设计（论文）撰写规范（工科、理科类专业).doc》。</li>
 <li>目前项目组人手紧缺，<strong>强烈欢迎校友们的加入</strong>。</li>
 </ol>
-<h2 id="如何使用">⭐如何使用⭐</h2>
+<h2 id="-如何使用-">⭐ 如何使用 ⭐</h2>
 <p>下载该仓库，将会得到<code>附件2：本科毕业设计（论文）格式范例（工科、理科类专业).doc</code>该文件的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span>版本，可以参考该文件内的定义使用</p>
 <h3 id="maintex"><code>main.tex</code></h3>
 <pre><code class="language-tex"><span class="hljs-keyword">\documentclass</span>{scutthesis} <span class="hljs-comment">% 不填充空白页。如果需要双面打印版，请注释掉本行并启用下一行</span>
@@ -1204,7 +1339,7 @@ pip3 install pygments
 </code></pre>
 <h3 id="交叉引用和参考文献引用">交叉引用和参考文献引用</h3>
 <h4 id="参考文献">参考文献</h4>
-<p>参考文献均使用bibtex的形式记录在<code>main.bib</code>文件中，当需要引用时可使用<code>\cite</code>和<code>\overcite\</code>两个命令引用，前者为引用符号处于文本基线，后者为上标形式。如图</p>
+<p>参考文献均使用 bibtex 的形式记录在<code>main.bib</code>文件中，当需要引用时可使用<code>\cite</code>和<code>\overcite\</code>两个命令引用，前者为引用符号处于文本基线，后者为上标形式。如图</p>
 <p><img src="https://raw.githubusercontent.com/ShevonKuan/images/main/image-20230410163327424.png" alt="image-20230410163327424"></p>
 <p>对应代码</p>
 <pre><code class="language-tex"><span class="hljs-keyword">\section</span>{研究现状}
