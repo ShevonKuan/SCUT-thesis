@@ -641,6 +641,8 @@
     \gdef\CTEX@prechapter{\CTEX@preappendix}
     \gdef\CTEX@thechapter{\CTEX@appendix@number}
     \gdef\CTEX@postchapter{}
+    \renewcommand\thefigure{\Alph{chapter}-\arabic{figure}}
+    \renewcommand\thetable{\Alph{chapter}-\arabic{table}}
 }
 
 
