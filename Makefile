@@ -27,6 +27,11 @@ clean:
 		*.synctex.gz
 	-@find . -name *.aux -exec rm {} \;
 
+update:
+#自动下载最新cls并备份旧版替换
+	-@mv ./scutthesis.cls ./scutthesis.cls.bak
+	-@wget -O ./scutthesis.cls https://raw.githubusercontent.com/ShevonKuan/SCUT-thesis/main/scutthesis.cls
+	-@echo "Update scutthesis.cls successfully!"
 # install-fonts:
 # 	cd fonts && chmod +x init_fonts.sh && ./init_fonts.sh
 

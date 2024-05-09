@@ -1,5 +1,6 @@
 % 华南理工大学 本科生毕业论文 LaTeX 模板
 % ShevonKwan shevonkuan@datagrids.cn
+% verson: 49ebbdf 2024-05-09
 
 % 定义模板样式
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]

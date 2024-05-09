@@ -67,7 +67,7 @@
 
 ### 更新方法
 
-1. 点击[这里](https://github.com/ShevonKuan/SCUT-thesis/blob/main/scutthesis.cls)下载最新的`scutthesis.cls`文件
+1. 点击[这里](https://github.com/ShevonKuan/SCUT-thesis/blob/main/scutthesis.cls)下载最新的`scutthesis.cls`文件，或使用`make update`直接更新`scutthesis.cls`。
 2. 将下载的`scutthesis.cls`文件替换掉原来的文件
 3. 在正文区添加`\makedisclaim`命令，如下
     ```diff
