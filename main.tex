@@ -1,5 +1,6 @@
 ﻿\documentclass{scutthesis} % 不填充空白页。如果需要双面打印版，请注释掉本行并启用下一行
 %\documentclass[print-both-sides]{scutthesis} % 使用双面打印版（填充额外空白页以保证每一章开头都在奇数页）
+
 % 开始使用该模板请修改以下文件
 \input{docs/info}     % 在这里填写论文相关信息
 \input{docs/abstract}     % 在这里填写摘要内容注意华工要求关键词用分号分隔
@@ -8,9 +9,10 @@
 \frontmatter
 \pagenumbering{Roman}
 \makeUndergraduateCover    % 生成封面
-\makedisclaim
 
-%\makedisclaim[]            % 生成学位论文原创性声明和版权使用授权书，可选参数为签名文件路径，默认为image/签名.png 示例文件，不需要签名的话可以直接使用\makedisclaim[]命令
+% 生成学位论文原创性声明和版权使用授权书
+\makedisclaim[image/签名.png] % 生成带签名的原创性声明和版权使用授权书
+% \makedisclaim % 生成不带签名的原创性声明和版权使用授权书
 
 \makeabstract       % 生成中英文摘要
 \maketableofcontents        % 生成目录

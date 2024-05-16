@@ -361,7 +361,7 @@
 }
 
 % 原创性声明
-\newcommand\makedisclaim[1][image/签名.png]{
+\newcommand\makedisclaim[1][]{
     \ctexset {
         chapter = {
           format={\centering\zihao{2}\heiti},
@@ -377,14 +377,13 @@
     本人郑重声明：所呈交的论文是本人在导师的指导下独立进行研究所取得的研究成果。除了文中特别加以标注引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写的成果作品。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律后果由本人承担。
 
     作者签名：\hspace{5cm}日期：\number\year 年\number\month 月\number\day 日
-    % \begin{flushright}
-    %     \makebox[2.1cm][s]{作者签名：} \makebox[5cm]{\hspace{1cm}} \\
-    %     \vspace{\baselineskip}
-    %     \makebox[2.1cm][s]{日期：} \makebox[5cm]{\hspace{1cm}年\hspace{1cm}月\hspace{1cm}日} \\
-    % \end{flushright}
+        \ifthenelse{\equal{#1}{}}{%
+
+    }{%
     \begin{textblock}{5}(3.8,6.0) % 指定图片的位置和大小
         \includegraphics[height=1.5cm]{#1}
     \end{textblock}
+       }%
     % \input{docs/disclaim}
     \ctexset{chapter/break={}}
     \vspace{2em}
@@ -400,16 +399,15 @@
     指导教师签名：\hspace{4cm}日期：\number\year 年\number\month 月\number\day 日
 
     作者联系电话： \@phonenum\hspace{1.5cm} 电子邮箱:  \@mailbox
-    % \begin{flushright}
-    %     \makebox[2.1cm][s]{作者签名：} \makebox[5cm]{\hspace{1cm}} \\
-    %     \vspace{\baselineskip}
-    %     \makebox[2.1cm][s]{日期：} \makebox[5cm]{\hspace{1cm}年\hspace{1cm}月\hspace{1cm}日} \\
-    % \end{flushright}
+   \ifthenelse{\equal{#1}{}}{%
+
+    }{%
+
     \begin{textblock}{5}(3.8,10.745) % 指定图片的位置和大小
         \includegraphics[height=1.5cm]{#1}
     \end{textblock}
 
-
+ }%
 
     \thispagestyle{empty}
     \newclearpage
